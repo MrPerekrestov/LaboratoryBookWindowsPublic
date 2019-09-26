@@ -1,0 +1,102 @@
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\bin\Debug\LaboratoryBook.exe.config
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\bin\Debug\LaboratoryBook.exe
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\bin\Debug\LaboratoryBook.pdb
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\MainWindowResources.baml
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\MainWindow.g.cs
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\App.g.cs
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\LaboratoryBook_MarkupCompile.cache
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\LaboratoryBook_MarkupCompile.lref
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\MainWindow.baml
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\LaboratoryBook.g.resources
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\LaboratoryBook.Properties.Resources.resources
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\LaboratoryBook.csproj.GenerateResource.cache
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\LaboratoryBook.csproj.CoreCompileInputs.cache
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\LaboratoryBook.exe
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\LaboratoryBook.pdb
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\bin\Debug\MySql.Data.dll
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\bin\Debug\Google.Protobuf.dll
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\bin\Debug\MySql.Data.xml
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\LoginWindow\LoginWIndowStyle\BorderStyle.baml
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\LoginWindow\LoginWindow.g.cs
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\LoginWindow\LoginWindow.baml
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\LaboratoryBook.csproj.CopyComplete
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\bin\Debug\Microsoft.Windows.Shell.dll
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\bin\Debug\RibbonControlsLibrary.dll
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\bin\Debug\Microsoft.Windows.Shell.pdb
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\bin\Debug\Microsoft.Windows.Shell.xml
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\bin\Debug\RibbonControlsLibrary.pdb
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\bin\Debug\RibbonControlsLibrary.xml
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\LoginWindow\LoginWIndowStyle\BorderStyle.baml
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\MainWindowResources.baml
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\LoginWindow\LoginWindow.g.cs
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\MainWindow.g.cs
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\App.g.cs
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\LaboratoryBook_MarkupCompile.cache
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\LaboratoryBook_MarkupCompile.lref
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\LaboratoryBook.exe
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\LaboratoryBook.pdb
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\bin\Debug\LaboratoryBook.exe.config
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\bin\Debug\LaboratoryBook.exe
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\bin\Debug\LaboratoryBook.pdb
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\bin\Debug\Microsoft.Windows.Shell.dll
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\bin\Debug\MySql.Data.dll
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\bin\Debug\RibbonControlsLibrary.dll
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\bin\Debug\Google.Protobuf.dll
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\bin\Debug\Microsoft.Windows.Shell.pdb
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\bin\Debug\Microsoft.Windows.Shell.xml
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\bin\Debug\MySql.Data.xml
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\bin\Debug\RibbonControlsLibrary.pdb
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\bin\Debug\RibbonControlsLibrary.xml
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\LoginWindow\LoginWindow.baml
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\MainWindow.baml
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\LaboratoryBook.g.resources
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\LaboratoryBook.Properties.Resources.resources
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\LaboratoryBook.csproj.GenerateResource.cache
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\LaboratoryBook.csproj.CoreCompileInputs.cache
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\LaboratoryBook.csproj.CopyComplete
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\SelectColumnsWIndow\SelectColumnsWindow.g.cs
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\SelectColumnsWIndow\SelectColumnsWindow.baml
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\bin\Debug\Hardcodet.Wpf.TaskbarNotification.dll
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\CreateLaboratoryBookWindow\CreateWindow.g.cs
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\CreateLaboratoryBookWindow\CreateWindow.baml
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\bin\Debug\Hardcodet.Wpf.TaskbarNotification.dll
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\CreateLaboratoryBookWindow\CreateWindow.g.cs
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\SelectColumnsWIndow\SelectColumnsWindow.g.cs
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\CreateLaboratoryBookWindow\CreateWindow.baml
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\SelectColumnsWIndow\SelectColumnsWindow.baml
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\ModifyDatabaseWindow\ModifyDatabaseWindow.g.cs
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\ModifyDatabaseWindow\ModifyDatabaseWindow.baml
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\ModifyDatabaseWindow\ModifyDatabaseWindow.g.cs
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\ModifyDatabaseWindow\ModifyDatabaseWindow.baml
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\ModifyDatabaseWindow\AddUserWindow\AddUserWindow.g.cs
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\ModifyDatabaseWindow\AddUserWindow\AddUserWindow.baml
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\ModifyDatabaseWindow\AddUserWindow\AddUserWindow.g.cs
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\ModifyDatabaseWindow\AddUserWindow\AddUserWindow.baml
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\ModifyDatabaseWindow\AddColumnWindow\AddColumnWindow.g.cs
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\ModifyDatabaseWindow\AddColumnWindow\AddColumnWindow.baml
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\ModifyDatabaseWindow\AddColumnWindow\AddColumnWindow.g.cs
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\ModifyDatabaseWindow\AddColumnWindow\AddColumnWindow.baml
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\ModifyDatabaseWindow\AddListValueWindow\AddListValueWindow.g.cs
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\ModifyDatabaseWindow\AddListValueWindow\AddListValueWindow.baml
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\UserWindow\UserWindow.g.cs
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\UserWindow\UserWindow.baml
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\ModifyDatabaseWindow\AddListValueWindow\AddListValueWindow.g.cs
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\UserWindow\UserWindow.g.cs
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\ModifyDatabaseWindow\AddListValueWindow\AddListValueWindow.baml
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\UserWindow\UserWindow.baml
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\LaboratoryBook.csprojAssemblyReference.cache
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\UserWindow\ChangeNameWindow\ChangeNameWindow.g.cs
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\UserWindow\ChangeNameWindow\ChangeNameWindow.baml
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\ModifyUsersWindow\ModifyUsersWindow.g.cs
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\ModifyUsersWindow\ModifyUsersWindow.baml
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\LaboratoryBook.csprojAssemblyReference.cache
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\ModifyUsersWindow\CreateUserWindow\CreateUserWindow.g.cs
+C:\Users\Roman Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\ModifyUsersWindow\CreateUserWindow\CreateUserWindow.baml
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\ModifyUsersWindow\CreateUserWindow\CreateUserWindow.g.cs
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\ModifyUsersWindow\ModifyUsersWindow.g.cs
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\UserWindow\ChangeNameWindow\ChangeNameWindow.g.cs
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\ModifyUsersWindow\CreateUserWindow\CreateUserWindow.baml
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\ModifyUsersWindow\ModifyUsersWindow.baml
+C:\Users\Perekrestov\Disk Google\C#\Databases\LaboratoryBook\LaboratoryBook\obj\Debug\UserWindow\ChangeNameWindow\ChangeNameWindow.baml

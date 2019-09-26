@@ -1,0 +1,73 @@
+﻿<Window x:Class="LaboratoryBook.UserWindow.ChangeNameWindow.ChangeNameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LaboratoryBook.UserWindow.ChangeNameWindow"
+        mc:Ignorable="d"
+        Title="Change name"
+        WindowStyle="ToolWindow"
+        SizeToContent="WidthAndHeight"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize"
+        FontSize="16"
+        x:Name="WdwChangeName">
+    <Window.Resources>
+        <local:ChangeNameValidator x:Key="ChangeNameValidator"/>
+    </Window.Resources>
+    <Grid Margin="4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock Text="New name"
+                   Margin="4"
+                   Padding="4"
+                   Grid.Column="0"
+                   Grid.Row="0"/>
+
+        <TextBox Padding="4"
+                 Margin="4"
+                 Grid.Column="1"
+                 x:Name="TbxName"                 
+                 ToolTip="{Binding RelativeSource={RelativeSource self},
+                  Path=(Validation.Errors)[0].ErrorContent}"
+                 Grid.Row="0"
+                 Width="140">
+            <TextBox.Text>
+                <Binding ElementName="WdwChangeName" Path="UserName" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <local:ChangeNameValidator/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+            
+            <Button Content="Change"
+                    Margin="4"
+                    Padding="4"
+                    HorizontalAlignment="Right"
+                   
+                    Click="Button_Click"/>
+
+            <Button Content="Cancel"
+                    Margin="4"
+                    Padding="4"
+                    HorizontalAlignment="Right"
+                    Click="Button_Click"/>
+
+        </StackPanel>
+       
+    </Grid>
+</Window>

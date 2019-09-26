@@ -1,0 +1,294 @@
+﻿<Window x:Class="LaboratoryBook.ModifyDatabaseWindow.ModifyDatabaseWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LaboratoryBook.ModifyDatabaseWindow"
+        mc:Ignorable="d"
+        Title="Modify Database"
+        Height="460"
+        Width="400"
+        FontSize="16"
+        WindowStyle="ToolWindow"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner">
+    <Window.CommandBindings>
+        <CommandBinding Command="{x:Static local:ModifyDatabaseWindowCommands.Close}"
+                        CanExecute="СloseCommand_CanExecute"
+                        Executed="CloseCommand_Executed"/>
+        
+        <CommandBinding Command="{x:Static local:ModifyDatabaseWindowCommands.AddUser}"
+                        CanExecute="AddUserCommand_CanExecute"
+                        Executed="AddUserCommand_Executed"/>        
+
+        <CommandBinding Command="{x:Static local:ModifyDatabaseWindowCommands.RemoveUser}"
+                        CanExecute="RemoveUserCommand_CanExecute"
+                        Executed="RemoveUserCommand_Executed"/>
+
+        <CommandBinding Command="{x:Static local:ModifyDatabaseWindowCommands.AddColumn}"
+                        CanExecute="AddColumnCommand_CanExecute"
+                        Executed="AddColumnCommand_Executed"/>
+
+        <CommandBinding Command="{x:Static local:ModifyDatabaseWindowCommands.RemoveColumn}"
+                        CanExecute="RemoveColumnCommand_CanExecute"
+                        Executed="RemoveColumnCommand_Executed"/>
+
+        <CommandBinding Command="{x:Static local:ModifyDatabaseWindowCommands.AddListValue}"
+                        CanExecute="AddListValueCommand_CanExecute"
+                        Executed="AddListValueCommand_Executed"/>
+
+        <CommandBinding Command="{x:Static local:ModifyDatabaseWindowCommands.RemoveListValue}"
+                        CanExecute="RemoveListValueCommand_CanExecute"
+                        Executed="RemoveListValueCommand_Executed"/>
+
+    </Window.CommandBindings>
+    <Window.Resources>
+       
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+       
+                <GroupBox Header="Users"
+                          Grid.Row="0"
+                          Margin="4">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Column="0"
+                               Grid.Row="0"
+                               Margin="4"
+                               Padding="4"
+                               HorizontalAlignment="Left"
+                               Text="Users"/>
+                    <ComboBox  Grid.Row="0"
+                               Grid.Column="1"   
+                               Margin="4"  
+                               Width="130"  
+                               SelectedIndex="0"
+                               SelectedItem="{Binding Path=SelectedUser,
+                                                      Mode=TwoWay,
+                                                      UpdateSourceTrigger=PropertyChanged}"
+                               ItemsSource="{Binding Path=LaboratoryBookUsers,
+                                                     Mode=OneWay,
+                                                     UpdateSourceTrigger=PropertyChanged}">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding UserName}"/>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                <StackPanel Grid.Row="0"
+                            Grid.Column="2"
+                            Orientation="Horizontal"
+                            HorizontalAlignment="right">
+
+                    <Button Command="{x:Static local:ModifyDatabaseWindowCommands.RemoveUser}"
+                            Content="Remove"                            
+                            HorizontalAlignment="Right"                      
+                            Padding="4"
+                            Margin="4"/>
+                    
+                    <Button Command="{x:Static local:ModifyDatabaseWindowCommands.AddUser}"
+                            Content="Add"                            
+                            HorizontalAlignment="Right"                      
+                            Padding="4"
+                            Margin="4"/>
+                </StackPanel>
+                <TextBlock Grid.Row="1"
+                               Grid.Column="0"
+                               Margin="4"
+                               Padding="4"
+                               HorizontalAlignment="Left"
+                               Text="Permission"/>
+                    <ComboBox Grid.Row="1"
+                              Grid.Column="1"
+                              Margin="4"
+                              Width="130"
+                              ItemsSource="{Binding Path=LaboratoryBookPermissions,
+                                                    UpdateSourceTrigger=Default,
+                                                    Mode=TwoWay}"
+                              SelectedItem="{Binding Path=SelectedUser.PermissionID,
+                                                     UpdateSourceTrigger=Default,
+                                                     Mode=TwoWay}"/>
+                </Grid>
+                </GroupBox>
+        <GroupBox Grid.Row="1"                  
+                  Margin="4"
+                  Header="Columns">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>                    
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Row="0"
+                           Grid.Column="0"
+                           Text="Columns"
+                           Margin="4"
+                           Padding="4"/>
+                <ComboBox Grid.Row="0"
+                          Grid.Column="1"                         
+                          MinWidth="130"
+                          SelectedIndex="0"
+                          MaxWidth="130"
+                          SelectedItem="{Binding SelectedColumn}"
+                          ItemsSource="{Binding LaboratoryBookColumns}"
+                          Margin="4"
+                          Padding="4">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=ColumnName}"/>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <StackPanel Grid.Row="0"
+                            Grid.Column="2"
+                            Orientation="Horizontal"
+                            HorizontalAlignment="Right">
+                    
+                    <Button Command="{x:Static local:ModifyDatabaseWindowCommands.RemoveColumn}"
+                            HorizontalContentAlignment="Right"
+                            Content="Remove"
+                            Margin="4"
+                            Padding="4"/>
+                    
+                    <Button Command="{x:Static local:ModifyDatabaseWindowCommands.AddColumn}"
+                            HorizontalAlignment="Right"
+                            Content="Add"
+                            Margin="4"
+                            Padding="4"/>
+                </StackPanel>
+                <TextBlock Text="Name"
+                           Grid.Row="1"
+                           Grid.Column="0"
+                           Margin="4"
+                           Padding="4"/>
+                <TextBox Grid.Row="1"
+                         Grid.Column="1"
+                         MaxWidth="130"
+                         MinWidth="130"
+                         Text="{Binding SelectedColumn.ColumnName,
+                                        UpdateSourceTrigger=PropertyChanged,
+                                        Delay=1000}"
+                         Margin="4"
+                         Padding="4"/>
+                <TextBlock Text="Data type"
+                           Padding="4"
+                           Margin="4"
+                           Grid.Column="0"
+                           Grid.Row="2"/>
+                <TextBox Grid.Row="2"
+                         Grid.Column="1"
+                         Text="{Binding SelectedColumn.ColumnType}"
+                         Margin="4"
+                         Padding="4"/>
+            </Grid>
+            
+        </GroupBox>
+        <GroupBox Grid.Row="2"
+                  Margin="4"
+                  Header="Lists">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                
+                <TextBlock Margin="4"
+                           Padding="4"
+                           Grid.Row="0"
+                           Grid.Column="0"
+                           Text="List"/>
+
+                <ComboBox Margin="4"
+                          Padding="4"
+                          Grid.Row="0"
+                          Width="130"
+                          Grid.Column="1"
+                          
+                          ItemsSource="{Binding LaboratoryBookLists}"
+                          SelectedItem="{Binding SelectedList}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding ListName}"/>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>                    
+                </ComboBox>
+                <TextBlock Margin="4"
+                         Padding="4"
+                         Grid.Column="0"
+                         Grid.Row="1"
+                         Text="List values"/>
+
+                <ComboBox Margin="4"
+                          Padding="4"
+                          Grid.Column="1"
+                          Grid.Row="1"
+                          SelectedIndex="0"
+                          Width="130"
+                          ItemsSource="{Binding SelectedList.Values}"
+                          SelectedItem="{Binding SelectedList.SelectedValue}"
+                          x:Name="CbxListValues">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding ListValue}"/>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <StackPanel Grid.Column="2"
+                            Grid.Row="0"
+                            Orientation="Horizontal"
+                            HorizontalAlignment="Right">
+                    
+                    <Button Command="{x:Static local:ModifyDatabaseWindowCommands.RemoveListValue}"
+                            Margin="4"
+                            Padding="4"
+                            Content="Remove"/>
+                    
+                    <Button Command="{x:Static local:ModifyDatabaseWindowCommands.AddListValue}"
+                            Margin="4"
+                            Padding="4"
+                            Content="Add"/>
+                </StackPanel>                
+                <TextBox Padding="4"
+                         Margin="4"
+                         Grid.Column="2"
+                         Grid.Row="1" 
+                         HorizontalAlignment="Left"
+                         MinWidth="130"
+                         MaxWidth="130"
+                         Text="{Binding  SelectedList.SelectedValue.ListValue,
+                                         UpdateSourceTrigger=PropertyChanged,
+                                         Delay=1000}"/>
+            </Grid>
+        </GroupBox>
+        <Button Command="{x:Static local:ModifyDatabaseWindowCommands.Close}"
+                Grid.Row="3"
+                HorizontalAlignment="Right"
+                Margin="4"
+                Padding="4"
+                Content="Close"/>
+    </Grid>
+</Window>

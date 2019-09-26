@@ -1,0 +1,82 @@
+﻿<Window x:Class="LaboratoryBook.ModifyUsersWindow.ModifyUsersWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LaboratoryBook.ModifyUsersWindow"
+        mc:Ignorable="d"
+        FontSize="16"
+        SizeToContent="WidthAndHeight"
+        WindowStyle="ToolWindow"
+        WindowStartupLocation="CenterOwner"
+        Title="Modify users" >
+    <Window.Resources>
+        <local:NumberToStatusConverter x:Key="NumberToStatusConverter"/>
+        <local:StatusListConverter x:Key="StatusListConverter"/>
+    </Window.Resources>
+    <Grid Margin="4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock Text="User: "
+                   Margin="4"
+                   Padding="4"
+                   Grid.Column="0"
+                   Grid.Row="0"/>
+        <ComboBox Margin="4"
+                  Padding="4"
+                  Width="140"
+                  Grid.Row="0"
+                  Grid.Column="1"
+                  ItemsSource="{Binding UserList}"
+                  SelectedItem="{Binding SelectedUser}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding UserName}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <TextBlock Text="Status: "
+                   Margin="4"
+                   Padding="4"
+                   Grid.Column="0"
+                   Grid.Row="1"/>
+        
+        <ComboBox Padding="4"
+                  Margin="4"
+                  Grid.Row="1"
+                  Grid.Column="1"
+                  Width="140"
+                  ItemsSource="{Binding Path = StatusList, Mode=OneWay, Converter={StaticResource StatusListConverter}}"
+                  SelectedItem="{Binding SelectedUser.UserStatusId, Converter={StaticResource NumberToStatusConverter}}"/>
+        <!--SelectedItem="{Binding SelectedUser.UserStatusId, Converter={StaticResource NumberToStatusConverter}}"-->
+        
+        <StackPanel Grid.Row="2"
+                    Grid.ColumnSpan="2"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+
+            <Button Padding="4"
+                    Margin="4"
+                    Content="Remove"
+                    Click="Button_Click"/>
+
+            <Button Padding="4"
+                    Margin="4"
+                    Content="Create"
+                    Click="Button_Click"/>
+
+            <Button Padding="4"
+                    Margin="4"
+                    Content="Cancel"
+                    Click="Button_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

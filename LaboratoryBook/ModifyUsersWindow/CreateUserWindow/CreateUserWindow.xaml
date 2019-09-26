@@ -1,0 +1,83 @@
+﻿<Window x:Class="LaboratoryBook.ModifyUsersWindow.CreateUserWindow.CreateUserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LaboratoryBook.ModifyUsersWindow.CreateUserWindow"
+        mc:Ignorable="d"
+        Title="Create user"
+        ResizeMode="NoResize"
+        WindowStyle="ToolWindow"
+        FontSize="16"
+        WindowStartupLocation="CenterOwner"
+        SizeToContent="WidthAndHeight">
+    <Grid Margin="4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>            
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/> 
+        </Grid.RowDefinitions>
+        <TextBlock Text="User name: "
+                   Margin="4"
+                   Padding="4"
+                   Grid.Row="0"
+                   Grid.Column="0"/>
+        
+        <TextBox Margin="4"
+                 Padding="4"
+                 Width="140"
+                 Grid.Column="1"
+                 Grid.Row="0"
+                 x:Name="TbxUserName"/>
+        
+        <TextBlock Text="Password: "
+                   Margin="4"
+                   Padding="4"
+                   Grid.Row="1"
+                   Grid.Column="0"/>
+        
+        <TextBox Margin="4"
+                 Padding="4"
+                 Width="140"
+                 Grid.Column="1"
+                 Grid.Row="1"
+                 x:Name="TbxPassword"/>
+        
+        <TextBlock Text="Status: "
+                   Margin="4"
+                   Padding="4"
+                   Grid.Row="2"
+                   Grid.Column="0"/>
+
+        <ComboBox Margin="4"
+                  Padding="4"
+                  SelectedIndex="0"
+                  Grid.Row="2"
+                  Grid.Column="1"
+                  ItemsSource="{Binding}"
+                  DisplayMemberPath="AccessName"
+                  x:Name="CbxStatus"/>
+        <StackPanel Grid.Row="3"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="right">
+            
+            <Button Margin="4"
+                    Padding="4"
+                    Content="Create"
+                    Click="Button_Click"/>
+
+            <Button Margin="4"
+                    Padding="4"
+                    Content="Cancel"
+                    Click="Button_Click"/>
+
+        </StackPanel>
+    </Grid>
+</Window>

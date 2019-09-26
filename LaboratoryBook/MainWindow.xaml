@@ -1,0 +1,113 @@
+﻿<Window x:Class="LaboratoryBook.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LaboratoryBook"
+        mc:Ignorable="d"
+        Title="Laboratory book"
+        Height="auto"       
+        Style="{DynamicResource MainWinowStyle}"
+        Width="auto"           
+        FontSize="16"
+        WindowState="Maximized"
+        WindowStartupLocation="CenterScreen"       
+        x:Name="MwLaboratoryBook"
+        Foreground="White">
+    <Window.CommandBindings>
+        <CommandBinding Command="{x:Static local:MainWindowCommands.Refresh}"
+                        Executed="RefreshCommand_Executed"
+                        CanExecute="RefreshCommand_CanExecute"/>
+        
+        <CommandBinding Command="{x:Static local:MainWindowCommands.Search}"
+                        Executed="SearchCommand_Executed"
+                        CanExecute="SearchCommand_CanExecute"/>
+        
+        <CommandBinding Command="{x:Static local:MainWindowCommands.SetColumns}"
+                        Executed="SetColumnsCommand_Executed"
+                        CanExecute="SetColumnsCommand_CanExecute"/>
+        
+        <CommandBinding Command="{x:Static local:MainWindowCommands.ModifyDatabase}"
+                        Executed="ModifyDatabaseCommand_Executed"
+                        CanExecute="ModifyDatabaseCommand_CanExecute"/>
+
+        <CommandBinding Command="{x:Static local:MainWindowCommands.ModifyUserInfo}"
+                        Executed="ModifyUserInfoCommand_Executed"
+                        CanExecute="ModifyUserInfoCommand_CanExecute"/>
+
+        <CommandBinding Command="{x:Static local:MainWindowCommands.ModifyUsers}"
+                        Executed="ModifyUsersCommand_Executed"
+                        CanExecute="ModifyUsersCommand_CanExecute"/>
+
+    </Window.CommandBindings>
+    
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="MainWindowResources.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>       
+    </Window.Resources>
+    <Grid FocusManager.FocusedElement="{Binding ElementName=TbxSearch}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <ToolBar Background="#FFF7F7F7" 
+                 Grid.Row="0">
+            <Button Command="{x:Static local:MainWindowCommands.Refresh}"
+                    ToolTip="Get refreshed data from server">
+                <Image Source="icons/refresh.png"/>
+            </Button>
+            <Button Command="{x:Static local:MainWindowCommands.SetColumns}"
+                    ToolTip="Select visible columns">               
+                <Image Source="icons/select_columns.png"/>
+            </Button>
+            <Separator Margin="5,0"/>
+            <TextBox MinWidth="150"
+                     BorderBrush="Gray"
+                     ToolTip="Enter the text which you want to search"                     
+                     x:Name="TbxSearch"/>
+            
+            <Button Command="{x:Static local:MainWindowCommands.Search}"
+                    ToolTip="Search through each column of laboratory book">
+                <Image Source="icons/search.png"/>
+            </Button>            
+            
+            <Separator/>
+            <Button Command="{x:Static local:MainWindowCommands.ModifyUserInfo}">
+                <Image Source="icons/user.png"/>
+            </Button>
+            <Button Command="{x:Static local:MainWindowCommands.ModifyUsers}"
+                    x:Name="BtnModifyUsers">
+                <Image Source="icons/manage_users.png"/>
+            </Button>
+            <Button Command="{x:Static local:MainWindowCommands.ModifyDatabase}"
+                    x:Name="BtnModifyDatabase">
+                <Image Source="icons/manage_databases.png"/>
+            </Button>
+        </ToolBar>
+        <ScrollViewer Grid.Row="1"
+                      Background="DarkGray"
+                      Height="auto">
+            <DataGrid FontWeight="Bold"
+                      FontSize="14"
+                      IsReadOnly="False"                      
+                      HorizontalAlignment="Left"
+                      VerticalAlignment="Top"
+                      Margin="5"
+                      ColumnWidth="auto"   
+                      Background="DarkGray"
+                      RowBackground="#FFE6E6E6"
+                      ItemsSource="{Binding ElementName=MwLaboratoryBook, Path=LaboratoryDataTable}"
+                      SelectionMode="Single"
+                      x:Name="DgLaboratoryBook">
+                <DataGrid.Effect>
+                    <DropShadowEffect />
+                </DataGrid.Effect>
+            </DataGrid>
+        </ScrollViewer>
+    </Grid>
+</Window>
+

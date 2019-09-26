@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaboratoryBook", "LaboratoryBook\LaboratoryBook.csproj", "{ADA392D9-E582-48DD-AA25-91BE8837A561}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADA392D9-E582-48DD-AA25-91BE8837A561}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADA392D9-E582-48DD-AA25-91BE8837A561}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADA392D9-E582-48DD-AA25-91BE8837A561}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADA392D9-E582-48DD-AA25-91BE8837A561}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7337C797-3102-4115-92DF-A9D5E53DA1B8}
+	EndGlobalSection
+EndGlobal

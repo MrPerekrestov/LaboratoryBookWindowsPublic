@@ -1,0 +1,136 @@
+-- Create laboratory book table
+
+
+CREATE TABLE `laboratory_books`.`laboratory_book_test_db` (
+  `sampleID` INT NOT NULL AUTO_INCREMENT,
+  `date` DATE NOT NULL,
+  `material` VARCHAR(32) NOT NULL,
+  `substrate` VARCHAR(32) NOT NULL,
+  `thickness` VARCHAR(32) NOT NULL,
+  `depositionTime` TIME NOT NULL,
+  `depositionPressure` VARCHAR(32) NOT NULL,
+  `regime` VARCHAR(32) NOT NULL,
+  `voltage` VARCHAR(32) NULL,
+  `current` VARCHAR(32) NULL,
+  `power` VARCHAR(32) NULL,
+  `onTime` VARCHAR(32) NULL,
+  `period` VARCHAR(32) NULL,
+  `argonFlow` VARCHAR(16) NULL,
+  `oxygenFlow` VARCHAR(16) NULL,
+  `description` VARCHAR(64) NULL,
+  `operator` VARCHAR(45) NOT NULL,
+  `permissionID`TINYINT(8) NOT NULL,
+  PRIMARY KEY (`sampleID`),
+  UNIQUE INDEX `sampleID_UNIQUE` (`sampleID` ASC) VISIBLE)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_bin;
+
+-- Create table regimes
+
+CREATE TABLE `laboratory_books`.`regimes_test_db` (
+  `regime` VARCHAR(32) NOT NULL,
+  PRIMARY KEY (`regime`),
+  UNIQUE INDEX `regime_UNIQUE` (`regime` ASC) VISIBLE)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_bin;
+
+-- Create table materials
+
+CREATE TABLE `laboratory_books`.`materials_test_db` (
+  `material` VARCHAR(32) NOT NULL,
+  PRIMARY KEY (`material`),
+  UNIQUE INDEX `material_UNIQUE` (`material` ASC) VISIBLE)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_bin;
+
+-- Create table substrates
+
+CREATE TABLE `laboratory_books`.`substrates_test_db` (
+  `substrate` VARCHAR(32) NOT NULL,
+  PRIMARY KEY (`substrate`),
+  UNIQUE INDEX `substrate_UNIQUE` (`substrate` ASC) VISIBLE)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_bin;
+
+-- insert
+
+INSERT INTO `laboratory_books`.`materials_test_db` (`material`) VALUES ('cobalt');
+
+INSERT INTO `laboratory_books`.`regimes_test_db` (`regime`) VALUES ('DC');
+INSERT INTO `laboratory_books`.`regimes_test_db` (`regime`) VALUES ('RF');
+INSERT INTO `laboratory_books`.`regimes_test_db` (`regime`) VALUES ('HiPIMS');
+INSERT INTO `laboratory_books`.`substrates_test_db` (`substrate`) VALUES ('silicon(111)');
+INSERT INTO `laboratory_books`.`laboratory_book_test_db` (`sampleID`, `date`, `material`, `substrate`, `thickness`, `depositionTime`, `depositionPressure`, `regime`, `voltage`, `power`, `argonFlow`, `oxygenFlow`, `description`, `operator`, `permissionID`) VALUES ('1', '2019/3/1', 'cobalt', 'silicon(111)', '213 nm', '00:30', '2.5 Pa', 'RF', '-123 V', '50', '16 sccm', '56 sccm', 'asdasd', 'Roman', '4');
+
+
+--  Add FK premission
+
+ALTER TABLE `laboratory_books`.`laboratory_book_test_db` 
+ADD INDEX `fk_permission_test_db_idx` (`permissionID` ASC) VISIBLE;
+;
+ALTER TABLE `laboratory_books`.`laboratory_book_test_db` 
+ADD CONSTRAINT `fk_permission_test_db`
+  FOREIGN KEY (`permissionID`)
+  REFERENCES `laboratory_books`.`permission` (`permission_id`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+  
+-- Add FK regime
+ALTER TABLE `laboratory_books`.`laboratory_book_test_db` 
+ADD INDEX `fk_regime_test_db_idx` (`regime` ASC) VISIBLE;
+;
+
+ALTER TABLE `laboratory_books`.`laboratory_book_test_db` 
+ADD CONSTRAINT `fk_regime_test_db`
+  FOREIGN KEY (`regime`)
+  REFERENCES `laboratory_books`.`regimes_test_db` (`regime`)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE;
+  
+-- Add FK material
+ALTER TABLE `laboratory_books`.`laboratory_book_test_db` 
+ADD INDEX `fk_material_test_db_idx` (`material` ASC) VISIBLE;
+;
+
+ALTER TABLE `laboratory_books`.`laboratory_book_test_db` 
+ADD CONSTRAINT `fk_material_test_db`
+  FOREIGN KEY (`material`)
+  REFERENCES `laboratory_books`.`materials_test_db` (`material`)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE;
+  
+-- Add FK substrate
+
+ALTER TABLE `laboratory_books`.`laboratory_book_test_db` 
+ADD INDEX `fk_substrate_test_db_idx` (`substrate` ASC) VISIBLE;
+;
+ALTER TABLE `laboratory_books`.`laboratory_book_test_db` 
+ADD CONSTRAINT `fk_substrate_test_db`
+  FOREIGN KEY (`substrate`)
+  REFERENCES `laboratory_books`.`substrates_test_db` (`substrate`)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE;
+  
+  -- Add FK operator
+
+ALTER TABLE `laboratory_books`.`laboratory_book_test_db` 
+ADD INDEX `fk_operator_test_db_idx` (`operator` ASC) VISIBLE;
+;
+
+ALTER TABLE `laboratory_books`.`laboratory_book_test_db` 
+ADD CONSTRAINT `fk_operator_test_db`
+  FOREIGN KEY (`operator`)
+  REFERENCES `laboratory_books`.`users` (`user_name`)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE;
+-- 
+
+
+
+
+
+

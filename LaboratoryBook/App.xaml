@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns:local="clr-namespace:LaboratoryBook"     
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="LaboratoryBook.App"
+             Startup="Application_Start"
+             StartupUri="LoginWindow/LoginWindow.xaml">   
+    
+</Application>

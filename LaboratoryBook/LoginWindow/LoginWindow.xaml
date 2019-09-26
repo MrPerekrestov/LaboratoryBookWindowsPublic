@@ -1,0 +1,162 @@
+﻿<Window x:Class="LaboratoryBook.LoginWindow.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LaboratoryBook.LoginWindow"
+        mc:Ignorable="d"        
+        AllowsTransparency="True"
+        Background="Transparent"        
+        FontSize="18"
+        Title="MainWindow"
+        Height="270"
+        Width="340"
+        WindowStartupLocation="CenterScreen"      
+        WindowStyle="None"
+        MouseDown="Window_MouseDown"
+        x:Name="LaboratoryBookLoginWindow">
+    <Window.CommandBindings>
+        <CommandBinding Command="{x:Static local:LoginCommands.Close}"
+                        CanExecute="CloseCommand_CanExecute"
+                        Executed="CloseCommand_Executed"/>
+        <CommandBinding Command="{x:Static local:LoginCommands.Login}"
+                        CanExecute="LoginCommand_CanExecute"
+                        Executed="LoginCommandTwo_Executed"/>
+        <CommandBinding Command="{x:Static local:LoginCommands.Connect}"
+                        CanExecute="ConnectCommand_CanExecute"
+                        Executed="ConnectCommand_Executed"/>
+        <CommandBinding Command="{x:Static local:LoginCommands.New}"
+                        CanExecute="NewCommand_CanExecute"
+                        Executed="NewCommand_Executed"/>
+    </Window.CommandBindings>
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="LoginWindowStyle/BorderStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <local:CreateButtonVisibilityConvertor x:Key="CreateButtonVisibilityConvertor"/>
+        </ResourceDictionary>        
+    </Window.Resources>
+    <Border Style="{StaticResource LoginBorderStyle}">
+        <Border.Effect>
+            <DropShadowEffect ShadowDepth="10"/>
+        </Border.Effect>
+        <Grid FocusManager.FocusedElement="{Binding ElementName=TbxPassword}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="75*"/>
+                <ColumnDefinition Width="75*"/>
+            </Grid.ColumnDefinitions>
+            <Button Content="Login"  
+                    Command="{x:Static local:LoginCommands.Login}"
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    Margin="10,5,10,5">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type ButtonBase}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                            <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="Button.IsDefaulted" Value="True">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" TargetName="border" Value="#FFBEE6FD"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#FF3C7FB1"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" TargetName="border" Value="#FFC4E5F6"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#FF2C628B"/>
+                            </Trigger>
+                            <Trigger Property="ToggleButton.IsChecked" Value="True">
+                                <Setter Property="Background" TargetName="border" Value="#FFBCDDEE"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#FF245A83"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Background" TargetName="border" Value="#FFF4F4F4"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#FFADB2B5"/>
+                                <Setter Property="Foreground" Value="#FF838383"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button Content="Close"
+                    Command="{x:Static local:LoginCommands.Close}"
+                    Grid.Column="1"
+                    Grid.Row="3"
+                    Margin="10,5,10,5"/>
+            <TextBlock Grid.Row="1"
+                       Grid.Column="0"
+                       HorizontalAlignment="Center"                                              
+                       Text="login"
+                       VerticalAlignment="Center"/>
+            <TextBlock Grid.Row="2"
+                       Grid.Column="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"                       
+                       Text="password" />
+            <TextBox Grid.Column="1"
+                     Grid.Row="1"
+                     Text=""
+                     VerticalAlignment="Center"                     
+                     MinWidth="120"
+                     Margin="5"
+                     x:Name="TbxLogin"/>
+            <PasswordBox  Grid.Row="2"
+                          Grid.Column="1"                         
+                          VerticalAlignment="Center"
+                          MinWidth="120"
+                          Margin="5"
+                          x:Name="TbxPassword"/>
+            <Label Content="Login to laboratory workbook"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"/>
+            <TextBlock Grid.Column="0"
+                       Grid.ColumnSpan="2"
+                       Grid.Row="4"  
+                       HorizontalAlignment="Center"
+                       Text="Enter login and password, please"                       
+                       VerticalAlignment="Center"
+                       x:Name="TbkConnectionStatus"/>
+            <ComboBox FontSize="14"
+                      Grid.Column="0"
+                      Grid.Row="5"
+                      Margin="10,8"
+                      IsEnabled="False"
+                      x:Name="CbxDataBases"
+                      ItemsSource="{Binding}"/>
+            <StackPanel Orientation="Horizontal"
+                        Grid.Column="1"
+                        Grid.Row="5">
+                <Button Command="{x:Static local:LoginCommands.Connect}"  
+                        HorizontalAlignment="Stretch"
+                        Margin="10,5"
+                        Padding="3"
+                        Content="Connect"/>
+                <Button Command="{x:Static local:LoginCommands.New}"
+                        Content="New..."                       
+                        HorizontalAlignment="Stretch"
+                        Visibility="{Binding ElementName=LaboratoryBookLoginWindow,
+                                             Path=BookUser,
+                                             Converter={StaticResource CreateButtonVisibilityConvertor},
+                                             Mode=OneWay}"
+                        Padding="3"
+                        Margin="0,5,5,5"                        
+                        />
+            </StackPanel>            
+        </Grid>
+    </Border>
+</Window>
